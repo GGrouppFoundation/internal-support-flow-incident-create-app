@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>GGroupp.Internal.Support.Flow.Incident.Create</RootNamespace>
+    <AssemblyName>GGroupp.Internal.Support.Flow.Incident.Create.Queue</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\2.Logic\Logic.InOut\Logic.InOut.csproj" />
+    <ProjectReference Include="..\Queue.InOut\Queue.InOut.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EarlyFuncPack.Core.AsyncPipeline" Version="0.2.0" />
+    <PackageReference Include="GGroupp.Infra.Azure.WebJobs.Storage.Queues.Abstractions" Version="1.2.0" />
+    <PackageReference Include="GGroupp.Infra.Bot.Builder.FlowActivity.HeroCard" Version="1.0.0" />
+    <PackageReference Include="GGroupp.Infra.Bot.Builder.FlowMessage.Extensions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Include="PrimeFuncPack.Core.Failure" Version="2.0.1" />
+    <PackageReference Include="PrimeFuncPack.Core.Func.Abstractions.AsyncValue" Version="2.0.0" />
+    <PackageReference Include="PrimeFuncPack.Dependency" Version="2.0.2" />
+  </ItemGroup>
+
+</Project>
