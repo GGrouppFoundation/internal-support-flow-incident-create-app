@@ -9,7 +9,7 @@
     <InvariantGlobalization>true</InvariantGlobalization>
     <RootNamespace>GGroupp.Internal.Support.Flow.Incident.Create</RootNamespace>
     <AssemblyName>GGroupp.Internal.Support.Flow.Incident.Create.Application</AssemblyName>
-    <Version>1.0.0-preview.1</Version>
+    <Version>1.0.0-preview.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
