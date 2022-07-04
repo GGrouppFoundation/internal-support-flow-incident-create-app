@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>GGroupp.Internal.Support.Flow.Incident.Create</RootNamespace>
+    <AssemblyName>GGroupp.Internal.Support.Flow.Incident.Create.Queue.InOut</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GGroupp.Internal.Support.Contract.IncidentCaseTypeCode" Version="1.0.0" />
+    <PackageReference Include="GGroupp.Internal.Support.Contract.IncidentPriorityCode" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
