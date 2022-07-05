@@ -17,7 +17,7 @@ partial class IncidentCreateQueueItemHandler
             cancellationToken)
         .HandleCancellation()
         .Pipe(
-            static @in => @in.Message.Message)
+            static @in => @in.Message.Value)
         .Pipe(
             static message => new IncidentCreateFlowIn(
                 ownerId: message.OwnerId,
@@ -57,13 +57,12 @@ partial class IncidentCreateQueueItemHandler
     private Result<FlowActivity, QueueItemFailure> ProcessFailure(
         QueueItemIn<FlowMessage<IncidentJsonCreateFlowIn>> input, Failure<IncidentCreateFlowFailureCode> failure)
     {
-        var retry = (input.MaxRetryCount - input.RetryCount) > 0;
-        if (retry && failure.FailureCode is not IncidentCreateFlowFailureCode.NotAllowed)
+        if (input.MaxDeliveryCount > input.DeliveryCount && failure.FailureCode is not IncidentCreateFlowFailureCode.NotAllowed)
         {
             return new QueueItemFailure(failure.FailureMessage, returnToQueue: true);
         }
 
-        logger?.LogError("An error occured when queue item {messageId} was been processed: {errorMessage}", input.Id, failure.FailureMessage);
+        logger?.LogError("An error occured when queue item {messageId} was been processed: {errorMessage}", input.MessageId, failure.FailureMessage);
 
         return failure.FailureCode switch
         {

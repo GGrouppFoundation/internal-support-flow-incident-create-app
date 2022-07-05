@@ -21,8 +21,8 @@ internal static class AppHostBuilder
         .UseIncidentCreateApi()
         .UseIncidentCreateFlowLogic(
             GetIncidentCreateFlowOption)
-        .UseIncidentCreateQueue()
-        .ConfigureQueueProcessor(
+        .UseIncidentCreateFlowQueue()
+        .ConfigureBusQueueProcessor(
             hostBuilder);
 
     private static IncidentCreateFlowOption GetIncidentCreateFlowOption(this IServiceProvider serviceProvider)
