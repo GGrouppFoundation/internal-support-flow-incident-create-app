@@ -9,9 +9,9 @@ namespace GGroupp.Internal.Support.Flow.Incident.Create;
 using IIncidentCreateQueueItemHandler = IQueueItemHandler<FlowMessage<IncidentJsonCreateFlowIn>, FlowActivity>;
 using IIncidentCreateFunc = IAsyncValueFunc<IncidentCreateFlowIn, Result<IncidentCreateFlowOut, Failure<IncidentCreateFlowFailureCode>>>;
 
-public static class IncidentCreateQueueDependency
+public static class IncidentCreateFlowQueueDependency
 {
-    public static Dependency<IIncidentCreateQueueItemHandler> UseIncidentCreateQueue(this Dependency<IIncidentCreateFunc> dependency)
+    public static Dependency<IIncidentCreateQueueItemHandler> UseIncidentCreateFlowQueue(this Dependency<IIncidentCreateFunc> dependency)
     {
         _ = dependency ?? throw new ArgumentNullException(nameof(dependency));
 

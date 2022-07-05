@@ -17,9 +17,9 @@
 
   <ItemGroup>
     <PackageReference Include="EarlyFuncPack.Core.AsyncPipeline" Version="0.2.0" />
-    <PackageReference Include="GGroupp.Infra.Azure.WebJobs.Storage.Queues.Abstractions" Version="1.2.0" />
+    <PackageReference Include="GGroupp.Infra.Azure.WebJobs.Queues.Abstractions" Version="1.3.0" />
     <PackageReference Include="GGroupp.Infra.Bot.Builder.FlowActivity.HeroCard" Version="1.0.0" />
-    <PackageReference Include="GGroupp.Infra.Bot.Builder.FlowMessage.Extensions" Version="1.0.0" />
+    <PackageReference Include="GGroupp.Infra.Bot.Builder.FlowMessage.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
     <PackageReference Include="PrimeFuncPack.Core.Failure" Version="2.0.1" />
     <PackageReference Include="PrimeFuncPack.Core.Func.Abstractions.AsyncValue" Version="2.0.0" />
