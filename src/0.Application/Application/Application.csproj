@@ -26,7 +26,6 @@
   <ItemGroup>
     <PackageReference Include="GGroupp.Infra.Azure.WebJobs.Logging" Version="1.0.0" />
     <PackageReference Include="GGroupp.Infra.Azure.WebJobs.Queues.ServiceBus" Version="1.0.2" />
-    <PackageReference Include="GGroupp.Infra.Azure.WebJobs.Queues.Storage" Version="1.3.0" />
     <PackageReference Include="GGroupp.Infra.Dataverse.Api" Version="2.9.0" />
     <PackageReference Include="GGroupp.Infra.Http.SocketsHandlerProvider" Version="2.3.0" />
     <PackageReference Include="GGroupp.Internal.Support.Incident.Create.Api" Version="2.5.0" />
